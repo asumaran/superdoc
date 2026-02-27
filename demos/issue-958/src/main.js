@@ -1,5 +1,5 @@
-import { SuperDoc } from 'superdoc';
-import 'superdoc/style.css';
+import { SuperDoc } from '@harbour-enterprises/superdoc';
+import '@harbour-enterprises/superdoc/style.css';
 
 const resultsEl = document.getElementById('results');
 
