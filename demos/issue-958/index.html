@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Issue #958 - currentTotalPages repro (superdoc@0.21.1)</title>
+    <style>
+      body { font-family: sans-serif; margin: 2rem; }
+      #results {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #f5f5f5;
+        border-radius: 4px;
+        white-space: pre-wrap;
+        font-family: monospace;
+      }
+      .error { color: red; }
+      .success { color: green; }
+    </style>
+  </head>
+  <body>
+    <h1>Issue #958 - superdoc@0.21.1</h1>
+    <p>Upload a <code>.docx</code> to test <code>activeEditor.currentTotalPages</code> in <code>onReady</code>.</p>
+    <input type="file" id="file-input" accept=".docx" />
+    <div id="results"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -505,6 +505,20 @@ const init = async () => {
   superdoc.value = new SuperDoc(config);
   superdoc.value?.on('ready', () => {
     superdoc.value.addCommentsList(commentsPanel.value);
+
+    // --- Issue #958 reproduction ---
+    const sd = superdoc.value;
+    const ae = sd.activeEditor;
+    const totalPages = ae?.currentTotalPages;
+    console.warn(
+      '[Issue #958] onReady fired:',
+      '\n  activeEditor:',
+      ae,
+      '\n  activeEditor?.currentTotalPages:',
+      totalPages,
+      '\n  (expected: number, got:',
+      typeof totalPages + ')',
+    );
   });
   superdoc.value?.on('exception', (error) => {
     console.error('SuperDoc exception:', error);
